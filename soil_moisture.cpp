@@ -10,13 +10,14 @@
 *
 * @return soil moisture percentage
 */
-int get_soil_moistute(int sensor_pin, bool debug) {
+int get_soil_moisture(int sensor_pin, bool debug) {
   int soil_moisture;
   int raw_data = 0;
 
   digitalWrite(sensor_pin, HIGH);  // Sets the sensor to on 
   delay(500);
   
+  if (debug) Serial.println("Reading From the Sensor ...");
   for (int i = 0; i < N_MEASURE; i++){  // Reads the sensor "N" times, by default N_MEASURE=3
     raw_data += analogRead(sensor_pin);
     delay(150);

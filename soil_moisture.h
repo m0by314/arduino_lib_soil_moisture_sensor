@@ -12,6 +12,6 @@
 #define MIN 0
 #define MAX 100
 
-int get_soil_moistute(int sensor_pin, bool debug=false);
+int get_soil_moisture(int sensor_pin, bool debug=false);
 
 #endif
