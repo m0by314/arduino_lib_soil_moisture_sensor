@@ -6,9 +6,7 @@
 #define _SOIL_SENSOR_H_
 
 #define N_MEASURE 3     // Number of measures performed by the sensor to make an average 
-
-#define HIGH_VALUE 4095 
-#define LOW_VALUE 0  
+ 
 #define MIN 0
 #define MAX 100
 
