@@ -26,7 +26,7 @@ int get_soil_moisture(int sensor_pin, bool debug) {
   digitalWrite(sensor_pin, LOW); // Sets the sensor to off
   
   raw_data = raw_data / N_MEASURE;  // Averages the data obtained by the sensor 
-  soil_moisture = map(raw_data, HIGH_VALUE, LOW_VALUE, MIN, MAX);  // Calculates the percentage of humidity
+  soil_moisture = map(raw_data, DRY_VALUE, WET_VALUE, MIN, MAX);  // Calculates the percentage of humidity
 
   if (debug) {
       Serial.printf("Raw sensor data: %i\n", raw_data);
