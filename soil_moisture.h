@@ -9,7 +9,9 @@
  
 #define MIN 0
 #define MAX 100
+#define DRY_VALUE <value obtained in air>
+#define WET_VALUE <value obtained after immersing it in water>
 
-int get_soil_moisture(int sensor_pin, bool debug=false);
+int get_soil_moisture(int sensor_pin);
 
 #endif
