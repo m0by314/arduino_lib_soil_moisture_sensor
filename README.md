@@ -4,6 +4,6 @@ In order for the sensor to function correctly, it is necessary to carry out a ca
 
 After calibration you can define this constants in the header file: 
 ```
-# define DRY_VALUE <value obtained in air>
-# define WET_VALUE <value obtained after immersing it in water>
+#define DRY_VALUE <value obtained in air>
+#define WET_VALUE <value obtained after immersing it in water>
 ```
