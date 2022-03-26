@@ -6,7 +6,6 @@
 * Get the percentage of soil moisture
 *
 * @param sensor_pin   soil moisture sensor pin 
-* @param debug        if true displays the debugging messages, by default debug=false
 *
 * @return soil moisture percentage
 */
@@ -28,9 +27,9 @@ int get_soil_moisture(int sensor_pin, bool debug) {
   raw_data = raw_data / N_MEASURE;  // Averages the data obtained by the sensor 
   soil_moisture = map(raw_data, DRY_VALUE, WET_VALUE, MIN, MAX);  // Calculates the percentage of humidity
 
-  if (debug) {
-      Serial.printf("Raw sensor data: %i\n", raw_data);
-      Serial.printf("Soil moisture : %i%%\n", soil_moisture);
-  }
+  
+  Serial.printf("Raw sensor data: %i\n", raw_data);
+  Serial.printf("Soil moisture : %i%%\n", soil_moisture);
+  
   return soil_moisture;
 }
