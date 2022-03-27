@@ -5,13 +5,16 @@
 #ifndef _SOIL_SENSOR_H_
 #define _SOIL_SENSOR_H_
 
-#define N_MEASURE 3     // Number of measures performed by the sensor to make an average 
- 
-#define MIN 0
-#define MAX 100
-#define DRY_VALUE <value obtained in air>
-#define WET_VALUE <value obtained after immersing it in water>
 
-int get_soil_moisture(int sensor_pin);
+class MoistureSensor {
+    public:
+        MoistureSensor(int sensor_pin, int dry_value, int wet_value);
+        int get_soil_moisture_percent();
+        int read_sensor();
+        void calibrate();
+
+    private:
+        int _sensor_pin, _dry_value, _wet_value;
+};
 
 #endif
